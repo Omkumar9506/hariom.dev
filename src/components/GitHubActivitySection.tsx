@@ -3,6 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown, Check, Activity } from "lucide-react";
 import { GitHubActivityData, ContributionDay } from "@/types/portfolio";
+import { GithubIcon } from "@/components/Icons";
+import { PERSONAL_INFO } from "@/data/portfolioData";
 
 function useCountUp(end: number, duration: number = 900): number {
   const [count, setCount] = useState(0);
@@ -57,6 +59,7 @@ function formatDate(dateStr: string): string {
 }
 
 export default function GitHubActivitySection() {
+  const githubUsername = process.env.NEXT_PUBLIC_GITHUB_USERNAME || process.env.GITHUB_USERNAME || PERSONAL_INFO.githubUsername || "Omkumar9506";
   const [selectedYear, setSelectedYear] = useState<string>("Current");
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [activityData, setActivityData] = useState<GitHubActivityData | null>(null);
@@ -145,9 +148,22 @@ export default function GitHubActivitySection() {
           <Activity className="h-3.5 w-3.5" />
           <span>DEVELOPER TELEMETRY // GITHUB ACTIVITY</span>
         </div>
-        <h2 className="text-2xl sm:text-3xl font-bold uppercase tracking-tight text-[#f2f4f7] mb-8">
-          Code Submissions &amp; Activity
-        </h2>
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold uppercase tracking-tight text-[#f2f4f7]">
+            Code Submissions &amp; Activity
+          </h2>
+          <a
+            href={`https://github.com/${githubUsername}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open ${githubUsername} on GitHub`}
+            className="inline-flex items-center gap-1.5 font-mono text-xs text-[#8a919e] hover:text-[#c8ff00] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#c8ff00] rounded px-2 py-1 border border-[#232732] bg-[#111317] hover:border-[#c8ff00]/40"
+          >
+            <GithubIcon className="h-3.5 w-3.5" />
+            <span>@{githubUsername}</span>
+            <span aria-hidden="true" className="text-[10px]">↗</span>
+          </a>
+        </div>
 
         {/* LeetCode-Style Submission Heatmap Card */}
         <div
@@ -156,14 +172,27 @@ export default function GitHubActivitySection() {
         >
           {/* Top Row: Keep existing header line */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-5 border-b border-[#1f232c] mb-6">
-            {/* Left: Contributions Count */}
-            <div>
-              <span className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-                {loading ? "--" : animatedTotal.toLocaleString()}
-              </span>
-              <span className="text-[#8a919e] text-xs sm:text-sm ml-2 font-normal">
-                contributions in {selectedYear === "Current" ? "the past one year" : selectedYear}
-              </span>
+            {/* Left: Contributions Count and Profile Link */}
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
+              <div>
+                <span className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                  {loading ? "--" : animatedTotal.toLocaleString()}
+                </span>
+                <span className="text-[#8a919e] text-xs sm:text-sm ml-2 font-normal">
+                  contributions in {selectedYear === "Current" ? "the past one year" : selectedYear}
+                </span>
+              </div>
+              <a
+                href={`https://github.com/${githubUsername}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${githubUsername} on GitHub`}
+                className="inline-flex items-center gap-1 font-mono text-xs text-[#8a919e] hover:text-[#c8ff00] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#c8ff00] rounded px-1.5 py-0.5 border border-[#2b303c] bg-[#181a21] hover:border-[#c8ff00]/40"
+              >
+                <GithubIcon className="h-3 w-3" />
+                <span>@{githubUsername}</span>
+                <span aria-hidden="true" className="text-[10px]">↗</span>
+              </a>
             </div>
 
             {/* Right: Active Days, Max Streak, Year Dropdown */}
