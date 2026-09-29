@@ -3,8 +3,9 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import ProjectShowcase from "@/components/ProjectShowcase";
 import GitHubActivitySection from "@/components/GitHubActivitySection";
+import LeetCodeActivitySection from "@/components/LeetCodeActivitySection";
+import ProjectShowcase from "@/components/ProjectShowcase";
 import SkillsSection from "@/components/SkillsSection";
 import EducationCertSection from "@/components/EducationCertSection";
 import ContactSection from "@/components/ContactSection";
@@ -34,19 +35,22 @@ export default function Home() {
         {/* 1. Hero: Name, Role, One-line pitch, Resume download & Contact */}
         <HeroSection />
 
-        {/* 2. Featured Projects: SkillShare, EduMeet, Library Management System */}
-        <ProjectShowcase />
-
-        {/* 3. GitHub Activity (LeetCode-style contribution heatmap) */}
+        {/* 2. GitHub Activity: LeetCode-style contribution heatmap */}
         <GitHubActivitySection />
 
-        {/* 4. Skills and Tools: Categorized, no percentage bars */}
+        {/* 3. LeetCode Activity: Problem solving submissions heatmap */}
+        <LeetCodeActivitySection />
+
+        {/* 4. Featured Projects: SkillShare, EduMeet, Library Management System */}
+        <ProjectShowcase />
+
+        {/* 5. Skills and Tools: Categorized, no percentage bars */}
         <SkillsSection />
 
-        {/* 5. Education & Certification: AKTU B.Tech IT & Udemy Next.js */}
+        {/* 6. Education & Certification: AKTU B.Tech IT & Udemy Next.js */}
         <EducationCertSection />
 
-        {/* 6. Contact Section: Email, LinkedIn, GitHub, LeetCode (NO phone number) */}
+        {/* 7. Contact Section: Email, LinkedIn, GitHub, LeetCode (NO phone number) */}
         <ContactSection />
       </main>
 

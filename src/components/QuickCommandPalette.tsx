@@ -98,11 +98,22 @@ export default function QuickCommandPalette({ isOpen, onClose }: QuickCommandPal
     },
     {
       id: "activity",
-      title: "View GitHub Activity & Submissions Heatmap",
+      title: "View GitHub Activity & Contributions Heatmap",
       category: "NAVIGATION",
       icon: Terminal,
       action: () => {
-        const el = document.getElementById("activity");
+        const el = document.getElementById("github-activity") || document.getElementById("activity");
+        el?.scrollIntoView({ behavior: "smooth" });
+        onClose();
+      }
+    },
+    {
+      id: "leetcode-activity",
+      title: "View LeetCode Activity & Problem Solving Stats",
+      category: "NAVIGATION",
+      icon: Terminal,
+      action: () => {
+        const el = document.getElementById("leetcode-activity");
         el?.scrollIntoView({ behavior: "smooth" });
         onClose();
       }

@@ -26,6 +26,17 @@ export interface GitHubActivityData {
   isLive: boolean;
 }
 
+export interface LeetCodeActivityData {
+  totalSolved: number;
+  easySolved: number;
+  mediumSolved: number;
+  hardSolved: number;
+  contestRating?: number;
+  contestTopPercentage?: string;
+  ranking?: string;
+  acceptanceRate?: string;
+}
+
 export interface ProjectMetric {
   label: string;
   value: string;

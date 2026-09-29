@@ -22,8 +22,9 @@ export default function Navbar({ onOpenCommandPalette }: NavbarProps) {
   }, []);
 
   const navLinks = [
+    { name: "GitHub", href: "#github-activity" },
+    { name: "LeetCode", href: "#leetcode-activity" },
     { name: "Projects", href: "#projects" },
-    { name: "Activity", href: "#activity" },
     { name: "Skills", href: "#skills" },
     { name: "Education", href: "#education" },
     { name: "Contact", href: "#contact" },

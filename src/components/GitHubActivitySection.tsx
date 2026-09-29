@@ -141,7 +141,8 @@ export default function GitHubActivitySection() {
   };
 
   return (
-    <section id="activity" className="py-20 bg-[#08090b] border-b border-[#20242e]">
+    <section id="github-activity" className="relative py-12 sm:py-14 bg-[#08090b] border-b border-[#20242e] scroll-mt-20">
+      <div id="activity" className="absolute -top-24 left-0" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Heading Tag */}
         <div className="flex items-center gap-2 font-mono text-xs text-[#c8ff00] mb-3">
