@@ -17,7 +17,7 @@ Built with **Next.js 16 (App Router)**, **TypeScript**, **Tailwind CSS v4**, **F
 
 ---
 
-## 🚀 Design Architecture (Anti "AI-Look")
+<!-- ## 🚀 Design Architecture (Anti "AI-Look")
 - **Monochrome & Volt Accent:** Zero generic purple-blue gradients or frosted glassmorphism spam. Deep obsidian (`#08090b`), muted charcoal panels (`#0d0f14`), and high-contrast tactical acid volt (`#c8ff00`).
 - **LeetCode-Style Activity Heatmap:** Recreates the exact LeetCode profile submission heatmap card using GitHub GraphQL telemetry: month groupings with visible gaps, year dropdown (Current / past 3 years), active days, max streak, and dark hover tooltips with arrows.
 - **Interactive Canvas Hero Mesh:** 60fps lightweight particle-mesh reacting elastically to mouse proximity, respecting `prefers-reduced-motion`.
@@ -133,4 +133,4 @@ npm start
 
 ## 🔒 Security & Privacy
 - **Zero Exposed Secrets:** API keys and GitHub tokens are strictly confined to server-side Next.js route handlers (`src/app/api/github/[year]/route.ts` and `src/app/api/contact/route.ts`).
-- **No Private Phone Number:** Phone number is deliberately omitted from public display to protect privacy while offering 1-click email, LinkedIn, and GitHub links.
+- **No Private Phone Number:** Phone number is deliberately omitted from public display to protect privacy while offering 1-click email, LinkedIn, and GitHub links. -->
