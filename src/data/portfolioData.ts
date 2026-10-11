@@ -47,7 +47,7 @@ export const PROJECTS: ProjectData[] = [
       { label: "Payment Safety", value: "100% Idempotent" },
       { label: "Cert Delivery", value: "Automated Instant" }
     ],
-    githubUrl: "https://github.com/Omkumar9506/skillshare-platform",
+    githubUrl: "https://github.com/Omkumar9506/Skillshare",
     liveUrl: "https://skillshare-preview.vercel.app",
     terminalCodeSnippet: `// NestJS RBAC Guard + Razorpay Webhook Verifier
 @Post('webhook')
@@ -83,8 +83,8 @@ async handlePaymentWebhook(@Body() payload: RazorpayEvent) {
       { label: "REST Endpoints", value: "10+ APIs" },
       { label: "Media Signaling", value: "Full-Duplex" }
     ],
-    githubUrl: "https://github.com/Omkumar9506/edumeet-webrtc",
-    liveUrl: "https://edumeet-live.vercel.app",
+    githubUrl: "https://github.com/Omkumar9506/EduMeet",
+    liveUrl: "https://edu-meet-five.vercel.app/",
     terminalCodeSnippet: `// WebRTC Mesh Signaling Engine
 socket.on('join-room', (roomId, userId) => {
   socket.join(roomId);
@@ -120,8 +120,8 @@ socket.on('join-room', (roomId, userId) => {
       { label: "REST Endpoints", value: "5+ APIs" },
       { label: "Query Speed", value: "Sub-40ms" }
     ],
-    githubUrl: "https://github.com/Omkumar9506/library-management-system",
-    liveUrl: "https://library-system-demo.vercel.app",
+    githubUrl: "https://github.com/Omkumar9506/LibraryX",
+    liveUrl: "https://library-management-system-nine-zeta.vercel.app/",
     terminalCodeSnippet: `// Automated Overdue Fine Calculation Engine
 const calculateFine = (dueDate, returnDate, dailyRate = 5) => {
   const overdueDays = Math.max(0, Math.ceil((returnDate - dueDate) / (1000 * 60 * 60 * 24)));
@@ -135,7 +135,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
     category: "Languages",
     categoryCode: "LANG",
     skills: [
-      { name: "Java", badge: "320+ LeetCode", highlight: true },
+      { name: "Java", badge: "360+ LeetCode", highlight: true },
       { name: "TypeScript", highlight: true },
       { name: "JavaScript (ES6+)", highlight: true },
       { name: "C++" },
